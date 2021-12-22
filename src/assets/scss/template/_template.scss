@@ -1,0 +1,135 @@
+body,
+html,
+.body {
+  background: #f7f7f7 !important;
+}
+
+table.body {
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  .columns {
+    @media only screen and (min-width: #{$global-breakpoint}) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+.container {
+  border-radius: 6px;
+  box-shadow: 0 5px 7px #e7e7e7;
+
+  &.full {
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+
+    hr {
+      border-bottom: 1px dashed darken($light-gray, 5%);
+    }
+
+    .callout-inner {
+      background: $light-gray;
+    }
+  }
+
+  .button {
+    table td {
+      transition: all 0.15s ease-in-out;
+    }
+    &:hover {
+      table td {
+        background-color: darken($primary-color, $button-background-hover-lightness);
+      }
+    }
+  }
+
+  .header {
+    border-radius: 5px 5px 0 0;
+  }
+
+  .footer {
+    p {
+      color: $medium-gray;
+      margin-bottom: 6px;
+    }
+  }
+
+  .menu-item {
+    transition: all 0.15s ease-in-out;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .callout-inner {
+    border: none;
+    border-radius: 4px;
+    background: lighten($light-gray, 4%);
+
+    a {
+      word-break: break-all;
+    }
+  }
+}
+
+.header {
+  &--colored {
+    background-color: $bg-safe;
+    background: linear-gradient(120deg, $bg-dark, $bg-light);
+  }
+}
+
+.wrapper {
+  hr {
+    border-bottom: 1px dashed darken($light-gray, 5%);
+  }
+
+  &.border-top {
+    border-top: 1px solid darken($light-gray, 5%);
+  }
+}
+
+h1 {
+  max-width: 90%;
+}
+
+hr {
+  height: 0;
+  border: none;
+  border-bottom: $hr-border;
+  margin: $hr-margin;
+}
+
+a {
+  transition: opacity 0.15s ease-in-out;
+  > img {
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    > img {
+      opacity: 0.8;
+    }
+  }
+}
+
+.menu-categories {
+  a {
+    font-size: 12px;
+    color: $black !important;
+    border-bottom: 1px dashed #000;
+  }
+
+  &--full {
+    > tbody > tr > td {
+      padding: 0 30px;
+    }
+  }
+}
+
+.border-top {
+  border-top: 1px solid $light-gray;
+}
