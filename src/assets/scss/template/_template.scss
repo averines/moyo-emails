@@ -31,6 +31,10 @@ table.body {
 
     .callout-inner {
       background: $light-gray;
+
+      &.warning {
+        background: darken($warning-color, 2);
+      }
     }
   }
 
@@ -58,7 +62,7 @@ table.body {
 
   .menu-item {
     transition: all 0.15s ease-in-out;
-    &:hover {
+    a:hover {
       opacity: 0.7;
     }
   }
@@ -68,8 +72,8 @@ table.body {
     border-radius: 4px;
     background: lighten($light-gray, 4%);
 
-    a {
-      word-break: break-all;
+    &.warning {
+      background: $warning-color;
     }
   }
 }
@@ -114,6 +118,10 @@ a {
       opacity: 0.8;
     }
   }
+
+  .word-break-all {
+    word-break: break-all;
+  }
 }
 
 .menu-categories {
@@ -132,4 +140,20 @@ a {
 
 .border-top {
   border-top: 1px solid $light-gray;
+}
+
+.order-list {
+  > tbody > tr {
+    > th {
+      color: $medium-gray;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $light-gray;
+    }
+
+    > td {
+      padding-top: 15px;
+      font-size: 14px;
+    }
+  }
 }
