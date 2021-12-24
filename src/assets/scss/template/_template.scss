@@ -20,21 +20,17 @@ table.body {
   border-radius: 6px;
   box-shadow: 0 5px 7px #e7e7e7;
 
-  &.full {
-    border-radius: 0;
-    box-shadow: none;
-    background: none;
+  .header {
+    border-radius: 5px 5px 0 0;
+    background-color: $bg-safe;
+    background: linear-gradient(120deg, $bg-dark, $bg-light);
+  }
 
-    hr {
-      border-bottom: 1px dashed darken($light-gray, 5%);
-    }
-
-    .callout-inner {
-      background: $light-gray;
-
-      &.warning {
-        background: darken($warning-color, 2);
-      }
+  .footer {
+    // border-top: 1px solid $light-gray;
+    p {
+      color: $medium-gray;
+      margin-bottom: 6px;
     }
   }
 
@@ -46,17 +42,6 @@ table.body {
       table td {
         background-color: darken($primary-color, $button-background-hover-lightness);
       }
-    }
-  }
-
-  .header {
-    border-radius: 5px 5px 0 0;
-  }
-
-  .footer {
-    p {
-      color: $medium-gray;
-      margin-bottom: 6px;
     }
   }
 
@@ -78,25 +63,13 @@ table.body {
   }
 }
 
-.header {
-  &--colored {
-    background-color: $bg-safe;
-    background: linear-gradient(120deg, $bg-dark, $bg-light);
-  }
-}
-
-.wrapper {
-  hr {
-    border-bottom: 1px dashed darken($light-gray, 5%);
-  }
-
-  &.border-top {
-    border-top: 1px solid darken($light-gray, 5%);
-  }
-}
-
 h1 {
   max-width: 90%;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 hr {
@@ -118,10 +91,6 @@ a {
       opacity: 0.8;
     }
   }
-
-  .word-break-all {
-    word-break: break-all;
-  }
 }
 
 .menu-categories {
@@ -138,22 +107,48 @@ a {
   }
 }
 
-.border-top {
-  border-top: 1px solid $light-gray;
+.order-list {
+  > tbody > tr > td {
+    padding-top: 15px;
+    font-size: 14px;
+  }
 }
 
-.order-list {
-  > tbody > tr {
-    > th {
-      color: $medium-gray;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border-bottom: 1px solid $light-gray;
-    }
+.order-img {
+  display: block;
+  border-radius: 3px;
+}
 
-    > td {
-      padding-top: 15px;
-      font-size: 14px;
-    }
+.product-card {
+  th {
+    padding: 10px;
   }
+
+  small > small {
+    color: $medium-gray;
+  }
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+  }
+
+  p {
+    padding: 10px;
+  }
+}
+
+.table-head th {
+  color: $medium-gray;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $light-gray;
+}
+
+.word-break-all {
+  word-break: break-all;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $light-gray;
 }
